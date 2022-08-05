@@ -18,7 +18,7 @@
 
 <script type="text/javascript">  
 
-var getUserMedia = navigator.mediaDevices.getUserMedia;   
+var getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);   
 
 getUserMedia.call(navigator, {   
 
