@@ -17,8 +17,8 @@
 </body>  
 
 <script type="text/javascript">  
-
-var getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);   
+console.log(navigator.mediaDevices);
+var getUserMedia = (navigator.mediaDevices || navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);   
 
 getUserMedia.call(navigator, {   
 
