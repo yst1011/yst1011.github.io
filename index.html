@@ -30,7 +30,7 @@ audio: true
 
 var video = document.getElementById('video');   
 
-video.src = window.URL.createObjectURL(localMediaStream);   
+video.srcObject = localMediaStream;   
 
 video.onloadedmetadata = function(e) {   
 
