@@ -37,7 +37,7 @@ class TTS {
                 flushTime: 1000,
                 inputCodec: 'Int16',
                 channels: 1,
-                sampleRate: 16000
+                sampleRate: 44100
             });
             this.player.volume(0.8);
         }
