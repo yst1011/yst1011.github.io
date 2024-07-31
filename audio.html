@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./pcm-player.js"></script>
+    <script src="./Socket.js"></script>
+    <script src="./base64.js"></script>
+    <script src="./TTS.js"></script>
+</head>
+<body>
+<input id="inputEl" type="text" id="input" style="width: 100vw; height: 300px"><br/>
+<button style="width: 100px;height: 45px; margin-top: 10px" onclick="playTTS()">播放</button>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get('token')
+    const tts = new TTS(token)
+    tts.init()
+
+    function playTTS() {
+        const el = document.getElementById('inputEl')
+        const strValue = el.value
+        tts.reset()
+        tts.sendStr(strValue)
+    }
+</script>
+</body>
+</html>
