@@ -78,9 +78,7 @@ class TTS {
     }
 
     init() {
-        const protocol = location.protocol === 'https:' ? 'wss://' : 'ws://';
-        this.socket = new Socket(`wss://vauth-rh.ha.chinamobile.com:28091//aichat/asstapi/textToAudioTTS/yifei/0/20/${this.token}`, this.msgCallback, this.statusCallback);
-        this.socket.connect(true);
+        //
     }
 
     destroy() {
